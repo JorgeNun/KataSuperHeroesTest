@@ -62,4 +62,8 @@ class SuperHeroDetailActivity : BaseActivity(), SuperHeroDetailPresenter.View {
         }
         bind<GetSuperHeroByName>() with provider { GetSuperHeroByName(instance()) }
     }
+
+    override fun showError() {
+        tv_super_hero_description.text = "There is not SuperHero with that name!!!"
+    }
 }
